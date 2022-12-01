@@ -1,0 +1,78 @@
+2022-11-30 10:06:39,331 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-11-30 10:13:26,317 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-11-30 10:17:01,256 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: QuanLyDeTai:QuanLyDeTai:1.0 @ D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\pom.xml.
+2022-11-30 10:17:03,726 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-11-30 10:17:03,727 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\main\resources
+2022-11-30 10:17:03,729 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-11-30 10:17:03,730 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\test\resources
+2022-11-30 10:17:03,743 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /QuanLyDeTai/src/main/java
+2022-11-30 10:17:03,744 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /QuanLyDeTai/src/test/java
+2022-11-30 10:17:03,883 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-11-30 10:17:04,223 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: QuanLyDeTai:QuanLyDeTai:1.0 @ D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\pom.xml.
+2022-11-30 10:17:04,745 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /QuanLyDeTai/src/main/java
+2022-11-30 10:17:04,761 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /QuanLyDeTai/src/test/java
+2022-11-30 10:17:04,874 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for QuanLyDeTai
+2022-11-30 10:17:04,887 [Worker-15: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2022-11-30 10:17:05,011 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-11-30 10:17:05,012 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\main\resources
+2022-11-30 10:17:05,015 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-11-30 10:17:05,016 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\test\resources
+2022-11-30 10:17:05,016 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of QuanLyDeTai
+2022-11-30 10:17:05,016 [Worker-25: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for QuanLyDeTai
+2022-11-30 10:17:05,046 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-11-30 16:40:24,767 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-12-01 09:13:40,979 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-12-01 09:13:42,157 [Worker-5: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/QuanLyDeTai/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:831) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$26(ProjectRegistryManager.java:1049) ~[na:na]
+	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220) ~[na:na]
+	at java.base/java.util.Collections$SynchronizedMap.computeIfAbsent(Collections.java:2760) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$25(ProjectRegistryManager.java:1048) ~[na:na]
+	at java.base/java.util.Map.computeIfAbsent(Map.java:1054) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1048) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:261) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:257) ~[org.eclipse.m2e.core.ui_1.19.0.20220206-1032.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:659) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:979) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.13.0.v20220512-1935.jar:na]
+2022-12-01 09:19:18,143 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-12-01 09:19:19,797 [Worker-7: reload maven project] ERROR o.e.m2e.editor.pom.MavenPomEditor - failed to load maven project for org.eclipse.ui.part.FileEditorInput(/QuanLyDeTai/pom.xml)
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:831) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$26(ProjectRegistryManager.java:1049) ~[na:na]
+	at java.base/java.util.HashMap.computeIfAbsent(HashMap.java:1220) ~[na:na]
+	at java.base/java.util.Collections$SynchronizedMap.computeIfAbsent(Collections.java:2760) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$25(ProjectRegistryManager.java:1048) ~[na:na]
+	at java.base/java.util.Map.computeIfAbsent(Map.java:1054) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1048) ~[na:na]
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:261) ~[na:na]
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:257) ~[org.eclipse.m2e.core.ui_1.19.0.20220206-1032.jar:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:659) ~[na:na]
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$3.run(MavenPomEditor.java:979) ~[na:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) ~[org.eclipse.core.jobs_3.13.0.v20220512-1935.jar:na]
+2022-12-01 09:21:37,578 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-12-01 09:22:04,258 [Worker-16: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: QuanLyDeTai:QuanLyDeTai:1.0 @ D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\pom.xml.
+2022-12-01 09:22:04,258 [Worker-14: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: QuanLyDeTai:QuanLyDeTai:1.0 @ D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\pom.xml.
+2022-12-01 09:22:07,027 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-12-01 09:22:07,028 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\main\resources
+2022-12-01 09:22:07,031 [Worker-16: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-12-01 09:22:07,031 [Worker-16: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\test\resources
+2022-12-01 09:22:10,694 [Worker-16: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: QuanLyDeTai:QuanLyDeTai:1.0 @ D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\pom.xml.
+2022-12-01 09:22:11,693 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-12-01 09:22:11,694 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\main\resources
+2022-12-01 09:22:11,697 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-12-01 09:22:11,698 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\test\resources
+2022-12-01 09:44:03,750 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-12-01 09:44:04,065 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: QuanLyDeTai:QuanLyDeTai:1.0 @ D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\pom.xml.
+2022-12-01 09:44:04,621 [Worker-25: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /QuanLyDeTai/src/main/java
+2022-12-01 09:44:04,622 [Worker-25: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /QuanLyDeTai/src/test/java
+2022-12-01 09:44:04,884 [Worker-25: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for QuanLyDeTai
+2022-12-01 09:44:04,900 [Worker-25: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2022-12-01 09:44:05,045 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-12-01 09:44:05,047 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\main\resources
+2022-12-01 09:44:05,049 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-12-01 09:44:05,050 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\QuanLyDeTai\src\test\resources
+2022-12-01 09:44:05,051 [Worker-13: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of QuanLyDeTai
+2022-12-01 09:44:05,052 [Worker-13: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for QuanLyDeTai
+2022-12-01 09:44:05,103 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
