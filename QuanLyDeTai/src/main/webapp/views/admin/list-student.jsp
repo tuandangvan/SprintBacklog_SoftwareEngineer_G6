@@ -23,8 +23,6 @@
 		<c:forEach items="${studentList}" var="student" varStatus="STT">	
 			<tr>
 				<td>${STT.index+1 }</td>
-				<%--  --%><c:url value="/upload?fname=${cate.image }" var="imgUrl"></c:url>
-				<%-- <td><img height="150" width="200" src="${imgUrl}" /></td> --%>
 				<td>${student.studentId }</td>
 				<td>${student.studentName }</td>
 				<td>${student.gender }</td>
