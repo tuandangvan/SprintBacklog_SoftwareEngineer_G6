@@ -41,8 +41,6 @@
 			<version>2.4.2</version>
 		</dependency>
 	</dependencies>
-
-
 	<build>
 		<plugins>
 			<plugin>
@@ -58,4 +56,4 @@
 			</plugin>
 		</plugins>
 	</build>
-</project> 
+</project>
