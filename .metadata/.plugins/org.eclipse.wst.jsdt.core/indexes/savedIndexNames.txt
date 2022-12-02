@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+D:\CODE\CNPM\SprintBacklog_SoftwareEngineer_G6\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-520186614.index
-1759597907.index
-4127329469.index
-2590546173.index
-1220347262.index
-3947058730.index
-1633361526.index

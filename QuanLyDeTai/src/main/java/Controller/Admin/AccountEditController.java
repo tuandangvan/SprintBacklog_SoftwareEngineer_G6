@@ -15,24 +15,29 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import Models.StudentModel;
-import Services.IStudentService;
-import Services.Impl.StudentServiceImpl;
+import Models.AccountModel;
+import Services.IAccountService;
+import Services.Impl.AccountServiceImpl;
 
-@WebServlet(urlPatterns = { "/admin/student/add" })
-public class StudentAddController extends HttpServlet {
-	IStudentService studentService = new StudentServiceImpl();
+
+@SuppressWarnings("serial")
+@WebServlet(urlPatterns = { "/admin/account/edit" })
+public class AccountEditController extends HttpServlet{
+	IAccountService accService = new AccountServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/add-student.jsp");
+		String userName = req.getParameter("id");
+		AccountModel acc = accService.getUser(userName);
+		req.setAttribute("acc", acc);
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/edit-account.jsp");
 		dispatcher.forward(req, resp);
+
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		StudentModel student = new StudentModel();
-
+		AccountModel acc = new AccountModel();
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
 		servletFileUpload.setHeaderEncoding("UTF-8");
@@ -42,21 +47,23 @@ public class StudentAddController extends HttpServlet {
 			req.setCharacterEncoding("UTF-8");
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
-				if (item.getFieldName().equals("mssv")) {
-					student.setStudentId(item.getString("UTF-8"));
-				} else if (item.getFieldName().equals("name")) {
-					student.setStudentName(item.getString("UTF-8"));
-				} else if (item.getFieldName().equals("email")) {
-					student.setEmail(item.getString("UTF-8"));
-				} else if (item.getFieldName().equals("phone")) {
-					student.setPhone(item.getString("UTF-8"));
-				} else if (item.getFieldName().equals("address")) {
-					student.setAddress(item.getString("UTF-8"));
+				if (item.getFieldName().equals("password")) {
+					acc.setPassword(item.getString("UTF-8"));
+					System.out.println(acc.getPassword());
 				}
+				else if (item.getFieldName().equals("role")){
+					acc.setRole(item.getString("UTF-8"));
+					System.out.println(acc.getRole());
+				}
+				else
+				{
+					acc.setUserName(item.getString("UTF-8"));
+					System.out.println(acc.getUserName());
+				}
+				
 			}
-			studentService.insert(student);
-
-			resp.sendRedirect(req.getContextPath() + "/admin/student/list");
+			accService.edit(acc);
+			resp.sendRedirect(req.getContextPath() + "/admin/account/list");
 		} catch (FileUploadException e) {
 			e.printStackTrace();
 		} catch (Exception e) {
