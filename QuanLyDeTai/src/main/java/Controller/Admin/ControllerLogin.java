@@ -43,8 +43,8 @@ public class ControllerLogin extends HttpServlet {
 			cookie.setMaxAge(30 * 60 * 60);
 			// thêm cookie vào response
 			resp.addCookie(cookie);
-			// chuyển sang trang HelloServlet
-			resp.sendRedirect(req.getContextPath() + "/admin/home");
+			 //chuyển sang trang HelloServlet
+			resp.sendRedirect(req.getContextPath() + "/admin/account/list");
 		} else {
 			// chuyển sang trang LoginServlet
 			// resp.sendRedirect("/login");
