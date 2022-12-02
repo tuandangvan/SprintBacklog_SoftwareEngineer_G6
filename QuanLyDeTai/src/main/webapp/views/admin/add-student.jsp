@@ -4,20 +4,25 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Quản lý đề tài</title>
 </head>
 <body>
 	<form role="form" action="add" method="post"
 		enctype="multipart/form-data">
 		<div class="form-group">
 			<label>Mã số sinh viên:</label> <input type="text" class="form-control"
-				placeholder="please enter MSSV" name="MSSV" />
+				placeholder="please enter MSSV" name="mssv"/>
 			<label>Họ và Tên:</label> <input type="text" class="form-control"
 				placeholder="please enter Name" name="name" />
 				
-			<div class="form-group"> Giới tính:
-				<label>Nam</label> <input type="checkbox" class="form-control" name="gender" />
-				<label>Nữ</label> <input type="checkbox" class="form-control" name="gender" />
+			<div class="form-group"> 
+				<label for="nation">Giới tính</label> 
+				<input type="text" class="form-control"
+					placeholder="please enter gender" name="gender" />
+				<!-- <select name="gender" id="gender" class="form-control">
+					<option value="Male">Nam</option>
+					<option value="Female">Nữ</option>
+				</select> -->
 			</div>
 			
 			<div class="form-group">
@@ -38,6 +43,7 @@
 		</div>
 		<button type="submit" class="btn btn-default">Thêm</button>
 		<button type="reset" class="btn btn-primary">Hủy</button>
+		
 	</form>
 </body>
 </html>

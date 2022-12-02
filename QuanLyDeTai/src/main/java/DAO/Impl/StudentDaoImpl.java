@@ -16,20 +16,21 @@ public class StudentDaoImpl extends DBConnection implements IStudentDao {
 	public void insert(StudentModel student) {
 		// TODO Auto-generated method stub
 		String sql = "INSERT INTO students(studentId, studentName, gender, birth, email, phone, address, lead, groupId, majorId)"
-				+ "VALUES(?, ?, ?, ?, ?, ?, ?, 1, 'G1', 'CNTT')";
+				+ "VALUES(?, ?, 1, '12/07/2002', ?, ?, ?, 1, 'G1', 'KTDL')";
 		try {
 			Connection conn = super.getConnection();
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, student.getStudentId());
 			ps.setString(2, student.getStudentName());
-			ps.setBoolean(3, student.getGender());
-			ps.setDate(4, student.getBirth());
-			ps.setString(5, student.getEmail());
-			ps.setString(6, student.getPhone());
-			ps.setString(7, student.getAddress());
-			ps.setBoolean(8, student.getLead());
-			ps.setString(9, student.getGroupId());
-			ps.setString(10, student.getMajorId());
+			//ps.setBoolean(3, student.getGender());
+			//ps.setDate(3, student.getBirth());
+			ps.setString(3, student.getEmail());
+			ps.setString(4, student.getPhone());
+			ps.setString(5, student.getAddress());
+			/*
+			 * ps.setBoolean(7, student.getLead()); ps.setString(8, student.getGroupId());
+			 * ps.setString(9, student.getMajorId());
+			 */
 			
 			ps.executeUpdate();
 		} catch (Exception e) {
@@ -44,9 +45,16 @@ public class StudentDaoImpl extends DBConnection implements IStudentDao {
 	}
 
 	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
-		
+	public void delete(String id) {
+		String sql = "DELETE FROM students WHERE studentId = ?";
+		try {
+			Connection con = super.getConnection();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
