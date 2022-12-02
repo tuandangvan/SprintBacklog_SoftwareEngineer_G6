@@ -2,7 +2,7 @@ package Connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-
+ 
 public class DBConnection {
 	private final String serverName = "DESKTOP-IK5D1LO";
 	private final String dbName = "DKDT_CNPM";
