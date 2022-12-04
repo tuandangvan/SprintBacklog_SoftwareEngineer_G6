@@ -19,10 +19,9 @@ import Models.AccountModel;
 import Services.IAccountService;
 import Services.Impl.AccountServiceImpl;
 
-
 @SuppressWarnings("serial")
 @WebServlet(urlPatterns = { "/admin/account/edit" })
-public class AccountEditController extends HttpServlet{
+public class AccountEditController extends HttpServlet {
 	IAccountService accService = new AccountServiceImpl();
 
 	@Override
@@ -37,35 +36,14 @@ public class AccountEditController extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		AccountModel acc = new AccountModel();
-		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
-		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-		servletFileUpload.setHeaderEncoding("UTF-8");
 		try {
-			resp.setContentType("text/html");
-			resp.setCharacterEncoding("UTF-8");
-			req.setCharacterEncoding("UTF-8");
-			List<FileItem> items = servletFileUpload.parseRequest(req);
-			for (FileItem item : items) {
-				if (item.getFieldName().equals("password")) {
-					acc.setPassword(item.getString("UTF-8"));
-					System.out.println(acc.getPassword());
-				}
-				else if (item.getFieldName().equals("role")){
-					acc.setRole(item.getString("UTF-8"));
-					System.out.println(acc.getRole());
-				}
-				else
-				{
-					acc.setUserName(item.getString("UTF-8"));
-					System.out.println(acc.getUserName());
-				}
-				
-			}
+			AccountModel acc = new AccountModel();
+			
+			acc.setUserName(req.getParameter("acc"));
+			acc.setPassword(req.getParameter("password"));
+			acc.setRole(req.getParameter("role"));
 			accService.edit(acc);
 			resp.sendRedirect(req.getContextPath() + "/admin/account/list");
-		} catch (FileUploadException e) {
-			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

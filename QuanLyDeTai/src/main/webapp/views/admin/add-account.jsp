@@ -7,14 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form role="form" action="add" method="post"
-		enctype="multipart/form-data">
+	<form action="add" method="post">
 		<div class="form-group">
 			<label>Tài khoản:</label> <input type="text" class="form-control"
-				placeholder="please enter ID Student" name="userName" />
+				placeholder="please enter ID Student" name="userName" /> <br />
 			<label>Mật khẩu:</label> <input type="text" class="form-control"
-				placeholder="please enter password" name="password" />
-				
+				placeholder="please enter password" name="password" /> <br />
+			<label>Quyền:</label>
 			<select name="role">
 		      <option>admin</option>
 		      	<option>teacher</option>

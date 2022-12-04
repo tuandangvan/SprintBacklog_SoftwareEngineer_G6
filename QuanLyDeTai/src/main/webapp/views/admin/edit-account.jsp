@@ -9,8 +9,7 @@
 </head>
 <body>
 	<c:url value="/admin/account/edit" var="edit"></c:url>
-	<form role="form" action="${edit }" method="post"
-		enctype="multipart/form-data">
+	<form role="form" action="${edit }" method="post">
 		<input name="acc" value="${acc.userName }" hidden="">
 		<div class="form-group">
 			<label>Tài khoản: ${acc.userName }</label>
