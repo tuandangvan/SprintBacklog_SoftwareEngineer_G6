@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="Models.AccountModel"/>
-    <fullyQualifiedTypeName name="DAO.IAccountDao"/>
-    <fullyQualifiedTypeName name="Connection.DBConnection"/>
-    <fullyQualifiedTypeName name="Models.StudentModel"/>
-</qualifiedTypeNameHistroy>

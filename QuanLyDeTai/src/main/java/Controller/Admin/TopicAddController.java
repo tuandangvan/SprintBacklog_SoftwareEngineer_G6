@@ -15,23 +15,24 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import Models.StudentModel;
-import Services.IStudentService;
-import Services.Impl.StudentServiceImpl;
+import Models.TopicModel;
+import Services.ITopicService;
+import Services.Impl.TopicServiceImpl;
 
-@WebServlet(urlPatterns = { "/admin/student/add" })
-public class StudentAddController extends HttpServlet {
-	IStudentService studentService = new StudentServiceImpl();
+@SuppressWarnings("serial")
+@WebServlet(urlPatterns = { "/admin/topic/add" })
+public class TopicAddController extends HttpServlet{
+	ITopicService studentService = new TopicServiceImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/add-student.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/admin/add-topic.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		StudentModel student = new StudentModel();
+		TopicModel topic = new TopicModel();
 
 		DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 		ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
@@ -42,19 +43,19 @@ public class StudentAddController extends HttpServlet {
 			req.setCharacterEncoding("UTF-8");
 			List<FileItem> items = servletFileUpload.parseRequest(req);
 			for (FileItem item : items) {
-				if (item.getFieldName().equals("mssv")) {
-					student.setStudentId(item.getString("UTF-8"));
+				if (item.getFieldName().equals("topicId")) {
+					topic.setTopicId(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("name")) {
-					student.setStudentName(item.getString("UTF-8"));
+					topic.setTopicName(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("email")) {
-					student.setEmail(item.getString("UTF-8"));
+					topic.setDetail(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("phone")) {
-					student.setPhone(item.getString("UTF-8"));
+					topic.setSignUpId(item.getString("UTF-8"));
 				} else if (item.getFieldName().equals("address")) {
-					student.setAddress(item.getString("UTF-8"));
+					topic.setMajorId(item.getString("UTF-8"));
 				}
 			}
-			studentService.insert(student);
+			studentService.insert(topic);
 
 			resp.sendRedirect(req.getContextPath() + "/admin/student/list");
 		} catch (FileUploadException e) {

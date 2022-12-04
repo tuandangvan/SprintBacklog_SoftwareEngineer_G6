@@ -23,9 +23,9 @@ public class StudentServiceImpl implements IStudentService{
 	}
 
 	@Override
-	public void delete(int id) {
+	public void delete(String id) {
 		// TODO Auto-generated method stub
-		
+		studentDao.delete(id);
 	}
 
 	@Override
@@ -57,5 +57,4 @@ public class StudentServiceImpl implements IStudentService{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

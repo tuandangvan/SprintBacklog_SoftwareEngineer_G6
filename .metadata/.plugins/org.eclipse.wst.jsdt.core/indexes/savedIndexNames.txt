@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+D:\HCMUTE\HK1_2022_2023\CNPM\Sprint\SprintBacklog_SoftwareEngineer_G6\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3535559601.index
-1243295954.index
-1220347262.index
-1633361526.index
-1960605727.index
-178704172.index
-496803820.index
